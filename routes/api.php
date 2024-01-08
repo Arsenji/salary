@@ -1,19 +1,27 @@
 <?php
 
+use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\Auth\RegistController;
+use App\Http\Controllers\TransactionController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| API Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "api" middleware group. Make something great!
-|
-*/
+// Роуты для аутентификации и регистрации
+Route::post('/auth', [AuthController::class, 'auth']);
+Route::post('/register', [RegistController::class, 'regist']);
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::middleware('auth:api')->group(function () {
+    // Защищенные маршруты для аутентифицированных сотрудников
+
+    // Создание транзакции
+    Route::post('/transactions', [TransactionController::class, 'createTransaction']);
+
+    // Получение суммы зарплаты
+    Route::get('/salary', [TransactionController::class, 'showSalary']);
+
+    // Выплата всей накопившейся зарплаты
+    Route::post('/pay-salary', [TransactionController::class, 'transactionForCurrentUser']);
+
+    // Выход из системы
+    Route::post('/logout', [AuthController::class, 'logout']);
 });

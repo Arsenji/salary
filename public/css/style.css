@@ -1,0 +1,140 @@
+body{
+    background-color: rgb(43, 43, 43);
+}
+#numberOfHours{
+    width: 50%;
+    margin: -68px 0 0 -10px;
+}
+#totalHours {
+    color: white;
+    font-size: 39px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    width: 500px;
+    margin: -53px 70px 8px 40px;
+    padding: 4px;
+}
+.toggle-password {
+    position: absolute;
+    right: 425px;
+    top: 32%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.alert{
+    transition: opacity 1s ease-out;
+}
+#hoursWork{
+    margin: 0 0 0 -720px;
+}
+#userName{
+    color: white;
+}
+#salaryButton{
+    margin: 162px 0 0 292px;
+}
+#authButton{
+    margin: 15px 0 0 248px;
+}
+#registButton{
+    margin: 15px 0 0 248px;
+}
+/* Стили для формы */
+#transactionForm {
+    max-width: 1000px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #3c3f41;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.btn{
+    background-color:#4CAF50FF;
+    color: white;
+    border-radius: 9px;
+    border-color: #4caf50FF;
+}
+.btn:hover{
+    background-color: #45a049;
+    border-color: #45a049;
+}
+/* Стили для авторизации и регистрации */
+.authRegister{
+    color: white;
+    display: block;
+    border-radius: 0.375rem;
+    border: 2px solid #4caf50;
+    padding: 7px;
+    width: 700px;
+    align-items: center;
+    margin-left: 380px;
+}
+.authRegisterButton{
+    background-color: #4caf50;
+    width: 171px;
+    display: inline-block;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.authRegisterButton:hover {
+    background-color: #45a049;
+    color: white;
+}
+.auth-register-form{
+    display: inline-flex;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-left: 37px;
+}
+/* Стили для ввода */
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Стили для кнопок */
+button {
+    padding: 10px 15px;
+    width: 171px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+#logout{
+    background-color: #45a049;
+    color: #fff;
+    padding: 9px 20px;
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+#logout:hover {
+    background-color: #45a049;
+}
+
+label{
+    margin-left: 37px;
+}
